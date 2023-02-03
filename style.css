@@ -673,8 +673,10 @@ footer span a:hover{
   
   .projects-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction:column;
+    align-items: row;
+    justify-content: space-around;
+    margin: auto;
   }
   .projects-container p {
     padding: 0.4rem;
@@ -689,7 +691,7 @@ footer span a:hover{
   }
   
   .project-card {
-    background-color: #fff;
+    background-color: red;
     border-radius: 11px;
     box-shadow: 0 3px 10px var(--primary-shadow);
     padding: 20px;
@@ -707,4 +709,18 @@ footer span a:hover{
   .socicon {
     width: 2rem;
     height: 2rem;
+  }
+
+  p {
+
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-style: bold;
+
+
+  }
+
+  .project-pic {
+
+height: 200px;
+width: 250px;
   }
