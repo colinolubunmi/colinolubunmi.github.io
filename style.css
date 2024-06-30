@@ -131,7 +131,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: red;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -202,11 +202,16 @@ section .title::after{
 }
 .home .home-content a:hover{
     color: crimson;
-    background: none;
+    background: #000;
 }
 /* about section styling */
+.about{
+    background-color: #111; 
+    color: #fff;
+}
 .about .title::after{
     content: "Who Am I?";
+    background-color: #111;
 }
 .about .about-content .left{
     width: 45%;
@@ -247,165 +252,70 @@ section .title::after{
     color: crimson;
     background: none;
 }
-/* services section styling */
-.services, .teams{
-    color:#fff;
-    background: #111;
-}
-.services .title::before,
-.teams .title::before{
-    background: #fff;
-}
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "Skills Provided";
-}
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background: crimson;
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
+
 /* skills section styling */
-.projects .title::after{
-    content: "My Work";
+.projects {
+    text-align: center;
+    padding: 50px 0;
 }
-.projects .skills-content .column{
-    width: calc(50% - 30px);
-}
-.projects .skills-content .left .text{
-    font-size: 20px;
+
+.projects .title {
+    font-size: 36px;
     font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: red;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid red;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: red;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
+    margin-bottom: 30px;
     position: relative;
 }
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: red;
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
-}
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
-}
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover{
-    background: red;
-}
-.teams .carousel .card .box{
+
+.projects .projects-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
+
+.projects .project-box {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 30%;
+    min-width: 280px;
 }
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
+
+.projects .project-box img {
+    width: 100%;
+    height: 200px; /* Fixed height */
     object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid red;
-    transition: all 0.3s ease;
+    border-radius: 8px;
 }
-.teams .carousel .card:hover img{
-    border-color: #fff;
+
+.projects .project-box h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
 }
+
+.projects .project-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.projects .project-box .btn {
+    background: red;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+   
+}
+
+.projects .project-box .btn:hover {
+    background: darkred;
+}
+
+
+
 .owl-dots{
     text-align: center;
     margin-top: 20px;
@@ -428,81 +338,131 @@ section .title::after{
     background: red!important;
 }
 /* contact section styling */
-.contact .title::after{
-    content: "Get In Touch";
+.contact {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0; /* Add some padding for better spacing */
 }
-.contact .contact-content .column{
-    width: calc(50% - 30px);
+
+.contact .max-width {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+
+.contact .title {
+    color: #fff;
 }
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-.contact .contact-content .row{
+
+.contact .contact-content {
     display: flex;
-    height: 65px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .contact-content .column {
+    flex: 1;
+    margin: 15px;
+}
+
+.contact .contact-content .left .text,
+.contact .contact-content .right .text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact .contact-content .icons .row {
+    display: flex;
     align-items: center;
-}
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: red;
-}
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-.contact .right form .fields{
-    display: flex;
-}
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
     margin-bottom: 15px;
 }
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .name{
+
+.contact .contact-content .icons .row i {
+    font-size: 24px;
     margin-right: 10px;
+    color: red;
 }
-.contact .right form .field input,
-.contact .right form .textarea textarea{
-    height: 100%;
+
+.contact .contact-content .icons .row .info {
+    color: #fff;
+}
+
+.contact .contact-content .icons .row .info .head {
+    font-weight: bold;
+    
+}
+
+.contact .contact-content .icons .row .info .sub-title {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.contact .contact-content .icons .row .info a {
+    color: red; /* Change email link color to red */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.contact form {
+    background: #222; /* Slightly lighter than the background for distinction */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
     width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
+    max-width: 500px; /* Adjust the max-width as needed */
+    box-sizing: border-box;
 }
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
+
+.contact form .fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
+
+.contact form .fields .field {
+    flex: 1;
 }
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
+
+.contact form .field {
+    margin-bottom: 20px;
 }
+
+.contact form .field input,
+.contact form .field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #fff; /* White background for input fields */
+    color: #000;
+    box-sizing: border-box;
+}
+
+.contact form .field input::placeholder,
+.contact form .field textarea::placeholder {
+    color: #666;
+}
+
+.contact form .button-area {
+    text-align: center;
+    font-size: 16px;
+}
+
+.contact form .button-area button {
+    background: red;
+    color: #fff;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    width: 100%; /* Make button responsive */
+    max-width: 200px; /* Adjust the max-width as needed */
+    box-sizing: border-box;
+}
+
+.contact form .button-area button:hover {
+    background: darkred;
+}
+
 .right form .button-area button{
   color: #fff;
   display: block;
@@ -524,13 +484,13 @@ section .title::after{
 }
 /* footer section styling */
 footer{
-    background: #111;
+    background: red;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
 }
 footer span a{
-    color: red;
+    color: #fff;
     text-decoration: none;
 }
 footer span a:hover{
