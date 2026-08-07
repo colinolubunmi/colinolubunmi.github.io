@@ -477,3 +477,202 @@ button { cursor: pointer; }
     transform: translateX(-50%);
 }
 .flappy-ground { position: absolute; inset: auto 0 0; height: 18%; background: repeating-linear-gradient(135deg, #d9bb70 0 12px, #caaa5d 12px 24px); }
+
+/* =========================================================
+   Final portfolio refinements
+   ========================================================= */
+
+/* BlockForge project preview */
+.blockforge-visual {
+    background: #07111f;
+}
+
+.blockforge-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 285px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* =========================================================
+   Mobile header + navigation
+   Top anchored, dark at all times, clean CTA spacing
+   ========================================================= */
+@media (max-width: 860px) {
+    :root {
+        --mobile-header-height: 70px;
+    }
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 3000;
+        width: 100%;
+        background: #08090d !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar,
+    .navbar.scrolled {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        min-height: var(--mobile-header-height);
+        padding: 0 !important;
+        background: #08090d !important;
+        border-bottom: 0;
+        backdrop-filter: none;
+    }
+
+    .nav-inner {
+        position: relative;
+        z-index: 3002;
+        min-height: var(--mobile-header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand,
+    .brand-name {
+        position: relative;
+        z-index: 3003;
+        color: #fff !important;
+    }
+
+    .brand-mark {
+        color: #fff;
+    }
+
+    .menu-toggle {
+        position: relative;
+        z-index: 3004;
+        color: #fff !important;
+    }
+
+    .menu-toggle span {
+        background: #fff !important;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--mobile-header-height);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2999;
+        width: 100%;
+        height: calc(100dvh - var(--mobile-header-height));
+        margin: 0;
+        padding: 16px 14px 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style: none;
+        background: linear-gradient(
+            180deg,
+            rgba(7, 8, 12, 0.995) 0%,
+            rgba(10, 11, 16, 0.99) 100%
+        );
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition:
+            opacity 220ms ease,
+            transform 260ms cubic-bezier(.2, .7, .2, 1),
+            visibility 220ms ease;
+    }
+
+    .nav-links.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links > li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .nav-links > li:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .nav-links > li > a:not(.nav-cta) {
+        width: 100%;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 15px 4px;
+        color: #fff;
+        font-size: 1.08rem;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: left;
+        transition: color 180ms ease, padding-left 180ms ease;
+    }
+
+    .nav-links > li > a:not(.nav-cta):hover,
+    .nav-links > li > a:not(.nav-cta):focus-visible {
+        color: var(--red);
+        padding-left: 8px;
+    }
+
+    .nav-links > li:last-child {
+        padding: 22px 0 4px;
+        border-bottom: 0;
+    }
+
+    .nav-links .nav-cta {
+        width: fit-content;
+        min-width: 126px;
+        min-height: 52px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 13px 22px;
+        color: #fff !important;
+        background: linear-gradient(145deg, var(--red), var(--red-dark));
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        box-shadow: 0 12px 30px rgba(227, 9, 47, 0.22);
+        font-size: 1.05rem;
+        font-weight: 600;
+        line-height: 1;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .nav-links .nav-cta:hover,
+    .nav-links .nav-cta:focus-visible {
+        color: #fff !important;
+        background: linear-gradient(145deg, var(--red-dark), var(--red));
+        box-shadow: 0 15px 34px rgba(227, 9, 47, 0.3);
+        transform: translateY(-2px);
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open .site-header,
+    body.menu-open .navbar {
+        background: #08090d !important;
+    }
+
+    /* Fixed mobile header needs room above the hero. */
+    .hero {
+        padding-top: 135px;
+    }
+}
