@@ -10,4 +10,6 @@ Open `index.html` directly or serve the folder with a local development server.
 
 - OluOps
 - SitePulse Manager
+- BlockForge
+- CommerceOps
 - Flappy Bird Clone
